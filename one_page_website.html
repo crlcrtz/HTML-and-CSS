@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Raf Simons Autumn/Winter Tribute</title>
+
+  <!-- Custom font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #000; /* black background */
+      color: #ccc; /* light gray text */
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      padding: 2em;
+    }
+    a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    a:hover {
+      border-color: #ccc;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    nav a {
+      margin: 0 1em;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    section {
+      margin-bottom: 3em;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+    #home {
+      animation-delay: 0.3s;
+      text-align: center;
+      padding: 1em;
+    }
+
+    #gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 3em 2em;
+      border-bottom: 1px solid #333;
+      animation-delay: 0.7s;
+    }
+
+    #gallery img {
+      max-width: 300px;
+      width: 100%;
+      border: 2px solid #444;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    #gallery img:nth-child(1) { animation-delay: 1.3s; }
+    #gallery img:nth-child(2) { animation-delay: 1.5s; }
+    #gallery img:nth-child(3) { animation-delay: 1.7s; }
+
+    #gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #555;
+    }
+
+    #video {
+      text-align: center;
+      animation-delay: 1.9s;
+    }
+    #video iframe {
+      border-radius: 10px;
+      box-shadow: 0 0 20px #222;
+      max-width: 100%;
+      height: auto;
+    }
+
+    #contact {
+      background-color: #111;
+      padding: 2em;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+      animation-delay: 2.3s;
+    }
+
+    #contact h2 {
+      margin-bottom: 1em;
+      text-align: center;
+      color: #ccc;
+      font-weight: 600;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+      color: #aaa;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 0.6em;
+      margin-bottom: 1.2em;
+      border-radius: 6px;
+      border: none;
+      background-color: #222;
+      color: #eee;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+
+    form input[type="submit"] {
+      background-color: #ccc;
+      border: none;
+      padding: 0.8em 1.5em;
+      font-weight: 600;
+      color: #000;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: block;
+      margin: 0 auto;
+      width: fit-content;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #aaa;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5em 0;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a> |
+    <a href="#gallery">Gallery</a> |
+    <a href="#video">Video</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Raf Simons Autumn/Winter 2001</h1>
+    <p>A revolutionary fashion moment — Raf Simons Autumn/Winter captured the spirit of youth rebellion with dark, oversized tailoring, evocative atmospheres, and a post-apocalyptic edge.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <img src="thumbnail_1.jpg" alt="Raf Simons Autumn/Winter 2001 Look 1" />
+    <img src="thumbnail_2.jpg" alt="Raf Simons Autumn/Winter 2001 Look 2" />
+    <img src="thumbnail_3.jpg" alt="Raf Simons Autumn/Winter 2001 Look 3" />
+  </section>
+
+  <!-- Video Section -->
+  <section id="video">
+    <h2>Watch the Autumn/Winter 2001 Show</h2>
+    <iframe
+      width="560"
+      height="200"
+      src="https://www.youtube.com/embed/ffcOSIvoGDw?si=tC-pmVVZc937FIoI"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" cols="40"></textarea>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Raf Simons AW01 Tribute Site. All images belong to their respective owners.</p>
+  </footer>
+
+</body>
+</html>

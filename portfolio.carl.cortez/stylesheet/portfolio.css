@@ -1,0 +1,222 @@
+/* === Global Reset & Base === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Dark Theme Support === */
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* === Typography === */
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    color: #222;
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    text-align: justify;
+}
+
+/* === Centered Content === */
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+/* === Navbar === */
+.Navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    animation: slideInNav 1s ease forwards;
+}
+
+.Navbar a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.Navbar a:hover {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.Navbar a.active {
+    background-color: #444;
+}
+
+.theme-switcher {
+    background: none;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes slideInNav {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* === Video === */
+#Typing_Video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+.Video_Text {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+/* === Layout Grid === */
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+}
+
+.Column_1, .Column_2 {
+    flex: 1 1 50%;
+    padding: 1rem;
+}
+
+.Column_1 {
+    background-color: #f9f9f9;
+}
+
+.Column_2 {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme .Column_1 {
+    background-color: #1e1e1e;
+}
+
+.Column_tall {
+    min-height: 500px;
+}
+
+/* === Images === */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    filter: grayscale(60%);
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* === Footer === */
+footer {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+body.dark-theme footer {
+    background: #1a1a1a;
+}
+
+/* === Contact Form === */
+form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark-theme form {
+    background: #222;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* === Responsive Fixes === */
+@media screen and (max-width: 768px) {
+    .Column_1, .Column_2 {
+        flex: 1 1 100%;
+    }
+
+    .Navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Navbar a {
+        width: 100%;
+        text-align: center;
+    }
+}

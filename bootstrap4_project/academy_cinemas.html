@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Academy Cinemas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 4 CSS CDN -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+
+  <style>
+    /* Custom gradient divider */
+    .divider {
+      height: 6px;
+      background: linear-gradient(
+        to right,
+        limegreen 33%,
+        orange 33%,
+        orange 66%,
+        skyblue 66%
+      );
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Centered sign-up text */
+    .signup-text {
+      text-align: center;
+      font-weight: bold;
+      color: blue;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body class="bg-white text-dark">
+
+  <div class="container mt-4">
+    <!-- Navigation Pills + Search -->
+    <div
+      class="d-flex justify-content-between align-items-center flex-wrap"
+    >
+      <ul class="nav nav-pills mb-2">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Showtimes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Deals</a>
+        </li>
+      </ul>
+
+      <form class="form-inline" role="search">
+        <input
+          class="form-control mr-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- Bootstrap 4 Alert Component -->
+    <!-- Alert to notify users about ticket availability -->
+    <div
+      class="alert alert-warning alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Notice:</strong> Tickets are selling fast! Book your seats
+      now.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <!-- Showtime Section -->
+    <h4 class="mt-4">Showtimes:</h4>
+    <div class="row mt-3">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="kongskullisland.jpg"
+            class="card-img-top"
+            alt="Poster of Kong Skull Island movie"
+            loading="lazy"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Kong Skull Island</h5>
+            <p class="card-text">
+              A team of scientists explore an uncharted island in the
+              Pacific...
+            </p>
+            <div>
+              <span class="badge badge-info text-dark m-1">1:00pm</span>
+              <span class="badge badge-info text-dark m-1">3:00pm</span>
+              <span class="badge badge-info text-dark m-1">5:30pm</span>
+              <span class="badge badge-info text-dark m-1">7:00pm</span>
+              <span class="badge badge-info text-dark m-1">9:30pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="ghostintheshell.jpg"
+            class="card-img-top"
+            alt="Poster of Ghost in the Shell movie"
+            loading="lazy"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Ghost in the Shell</h5>
+            <p class="card-text">
+              In the near future, Major Mira Killian is the first of her
+              kind...
+            </p>
+            <div>
+              <span class="badge badge-info text-dark m-1">1:00pm</span>
+              <span class="badge badge-info text-dark m-1">3:00pm</span>
+              <span class="badge badge-info text-dark m-1">5:30pm</span>
+              <span class="badge badge-info text-dark m-1">7:00pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="beautyandthebeast.jpg"
+            class="card-img-top"
+            alt="Poster of Beauty and the Beast movie"
+            loading="lazy"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Beauty and the Beast</h5>
+            <p class="card-text">
+              A selfish prince is cursed to become a monster unless he
+              learns to love...
+            </p>
+            <div>
+              <span class="badge badge-info text-dark m-1">1:00pm</span>
+              <span class="badge badge-info text-dark m-1">3:00pm</span>
+              <span class="badge badge-info text-dark m-1">5:30pm</span>
+              <span class="badge badge-info text-dark m-1">7:00pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Text -->
+    <div class="signup-text">SIGN UP FOR MOVIE CLUB</div>
+
+    <!-- Colored Divider -->
+    <div class="divider"></div>
+
+    <!-- Pagination -->
+    <nav class="d-flex justify-content-between">
+      <a class="btn btn-outline-secondary" href="#"
+        >‹ Previous</a
+      >
+      <a class="btn btn-outline-secondary" href="#">Next ›</a>
+    </nav>
+  </div>
+
+  <!-- Bootstrap 4 JS dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
